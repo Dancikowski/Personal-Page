@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import Home from "./components/Home";
-import About from "./components/About";
-import Technologies from "./components/Technologies";
+import SingleComponent from "./components/SingleComponent";
+import DotButtons from "./components/DotButtons";
+import Menu from "./components/MainMenu";
 class App extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			direction: null,
 			components: ["Home", "About", "Technologies", "Tools", "Projects"],
-			middle: false,
-			bottom: "Home",
+			begin: null,
+			selected: "Home",
 		};
 	}
 
@@ -25,14 +24,23 @@ class App extends Component {
 			scrollStatus.wheeling = true;
 			if (!scrollStatus.functionCall) {
 				if (e.deltaY > 0) {
-					this.updateState(true);
-					console.log(this.state.middle);
-					console.log(this.state.bottom);
+					this.state.components.indexOf(this.state.selected) !==
+						this.state.components.slice(-1)[0] &&
+						this.setState({
+							selected: this.state.components[
+								this.state.components.indexOf(
+									this.state.selected
+								) + 1
+							],
+						});
 				}
 				if (e.deltaY < 0) {
-					this.updateState(false);
-					console.log(this.state.middle);
-					console.log(this.state.bottom);
+					this.setState({
+						selected: this.state.components[
+							this.state.components.indexOf(this.state.selected) -
+								1
+						],
+					});
 				}
 				scrollStatus.functionCall = true;
 			}
@@ -40,32 +48,67 @@ class App extends Component {
 			window.setTimeout(() => {
 				scrollStatus.wheeling = false;
 				scrollStatus.functionCall = false;
-			}, 400);
+			}, 1500);
 		});
 	}
 
-	updateState(flag) {
-		const state = this.state;
-		console.log(flag);
+	handleUpdateSelected = component => {
 		this.setState({
-			direction: flag,
-			middle: !state.middle
-				? state.components[0]
-				: state.components[state.components.indexOf(state.middle) + 1],
-			bottom:
-				state.components[state.components.indexOf(state.bottom) + 1],
+			selected: component,
 		});
+	};
+
+	componentDidUpdate(prevProps, prevState, snapshot) {
+		if (this.state.selected !== prevState.selected) {
+			this.setState({
+				begin: prevState.selected,
+			});
+		}
 	}
 
 	render() {
 		return (
 			<div className="App">
-				<Home props={this.state} />
-				<About props={this.state} />
-				<Technologies props={this.state} />
+				<nav className="main-menu">
+					<ul>
+						{this.state.components.map(name => (
+							<Menu
+								Update={this.handleUpdateSelected}
+								name={name}
+							/>
+						))}
+					</ul>
+				</nav>
+				{this.state.components.map((name, index) => (
+					<SingleComponent
+						key={name}
+						state={this.state}
+						name={name}
+						unvisible={this.state.begin !== name && "unvisible"}
+						position={
+							this.state.components.indexOf(
+								this.state.components[index]
+							) >
+							this.state.components.indexOf(this.state.selected)
+								? "after"
+								: "before"
+						}
+					/>
+				))}
+				<nav className="nav-dots">
+					<ul>
+						{this.state.components.map(name => (
+							<DotButtons
+								Update={this.handleUpdateSelected}
+								key={name}
+								name={name}
+								state={this.state}
+							/>
+						))}
+					</ul>
+				</nav>
 			</div>
 		);
 	}
 }
-
 export default App;
