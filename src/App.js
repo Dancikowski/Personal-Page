@@ -20,27 +20,22 @@ class App extends Component {
 			functionCall: false,
 		};
 
+		window.addEventListener("keydown", event => {
+			console.log(event.keyCode);
+			if (event.keyCode === 40) this.signleScrollDown();
+			if (event.keyCode === 38) this.singleScrollUp();
+		});
+
 		window.addEventListener("wheel", e => {
 			scrollStatus.wheeling = true;
 			if (!scrollStatus.functionCall) {
 				if (e.deltaY > 0) {
 					this.state.components.indexOf(this.state.selected) !==
 						this.state.components.slice(-1)[0] &&
-						this.setState({
-							selected: this.state.components[
-								this.state.components.indexOf(
-									this.state.selected
-								) + 1
-							],
-						});
+						this.signleScrollDown();
 				}
 				if (e.deltaY < 0) {
-					this.setState({
-						selected: this.state.components[
-							this.state.components.indexOf(this.state.selected) -
-								1
-						],
-					});
+					this.singleScrollUp();
 				}
 				scrollStatus.functionCall = true;
 			}
@@ -49,6 +44,21 @@ class App extends Component {
 				scrollStatus.wheeling = false;
 				scrollStatus.functionCall = false;
 			}, 1500);
+		});
+	}
+
+	signleScrollDown() {
+		this.setState({
+			selected: this.state.components[
+				this.state.components.indexOf(this.state.selected) + 1
+			],
+		});
+	}
+	singleScrollUp() {
+		this.setState({
+			selected: this.state.components[
+				this.state.components.indexOf(this.state.selected) - 1
+			],
 		});
 	}
 

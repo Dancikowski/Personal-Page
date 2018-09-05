@@ -8,14 +8,13 @@ class SingleComponent extends Component {
 
 	render() {
 		const props = this.props;
-		console.log(props.state.components.indexOf(props.name));
 
 		return (
 			<div
 				className={
 					props.state.selected === props.name
-						? `active animated center wrapper--${props.name}`
-						: `center wrapper--${props.name} ${props.position} ${
+						? `active animated wrapper wrapper--${props.name}`
+						: `wrapper wrapper--${props.name} ${props.position} ${
 								props.unvisible
 						  }`
 				}
