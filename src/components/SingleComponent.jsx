@@ -2,6 +2,7 @@ import React from "react";
 
 import Home from "./Home";
 import About from "./About";
+import Technologies from "./Technologies";
 
 const SingleComponent = props => {
 	return (
@@ -14,7 +15,13 @@ const SingleComponent = props => {
 					  }`
 			}
 		>
-			{{ Home: <Home />, About: <About /> }[props.name]}
+			{
+				{
+					Home: <Home />,
+					About: <About />,
+					Technologies: <Technologies />,
+				}[props.name]
+			}
 		</div>
 	);
 };
