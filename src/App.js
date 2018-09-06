@@ -21,7 +21,6 @@ class App extends Component {
 		};
 
 		window.addEventListener("keydown", event => {
-			console.log(event.keyCode);
 			if (event.keyCode === 40) this.signleScrollDown();
 			if (event.keyCode === 38) this.singleScrollUp();
 		});
@@ -30,9 +29,7 @@ class App extends Component {
 			scrollStatus.wheeling = true;
 			if (!scrollStatus.functionCall) {
 				if (e.deltaY > 0) {
-					this.state.components.indexOf(this.state.selected) !==
-						this.state.components.slice(-1)[0] &&
-						this.signleScrollDown();
+					this.signleScrollDown();
 				}
 				if (e.deltaY < 0) {
 					this.singleScrollUp();
@@ -40,26 +37,30 @@ class App extends Component {
 				scrollStatus.functionCall = true;
 			}
 
-			window.setTimeout(() => {
+			setTimeout(() => {
 				scrollStatus.wheeling = false;
 				scrollStatus.functionCall = false;
-			}, 1500);
+			}, 2200);
 		});
 	}
 
 	signleScrollDown() {
-		this.setState({
-			selected: this.state.components[
-				this.state.components.indexOf(this.state.selected) + 1
-			],
-		});
+		this.state.selected !== this.state.components.slice(-1)[0] &&
+			this.setState({
+				selected: this.state.components[
+					this.state.components.indexOf(this.state.selected) + 1
+				],
+			});
+		console.log(this.state.selected);
 	}
 	singleScrollUp() {
-		this.setState({
-			selected: this.state.components[
-				this.state.components.indexOf(this.state.selected) - 1
-			],
-		});
+		this.state.selected !== this.state.components[0] &&
+			this.setState({
+				selected: this.state.components[
+					this.state.components.indexOf(this.state.selected) - 1
+				],
+			});
+		console.log(this.state.selected);
 	}
 
 	handleUpdateSelected = component => {
@@ -85,6 +86,7 @@ class App extends Component {
 							<Menu
 								Update={this.handleUpdateSelected}
 								name={name}
+								key={name}
 							/>
 						))}
 					</ul>
@@ -94,7 +96,7 @@ class App extends Component {
 						key={name}
 						state={this.state}
 						name={name}
-						unvisible={this.state.begin !== name && "unvisible"}
+						unvisible={this.state.begin !== name ? "unvisible" : ""}
 						position={
 							this.state.components.indexOf(
 								this.state.components[index]

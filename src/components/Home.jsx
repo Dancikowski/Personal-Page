@@ -10,7 +10,7 @@ class Home extends Component {
 					<div className="title">
 						<span className="title--text">My name is Damian</span>
 					</div>
-					<div class="card dots" />
+					<div className="card dots" />
 					<div className="tiny-info">
 						<span className="content">
 							I'm 21 years old IT student and design-minded
