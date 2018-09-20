@@ -210,6 +210,9 @@ li:hover .tooltip {
 				display: flex;
 				align-self: flex-start;
 				border: 1px solid rgb(206, 201, 201);
+				& a {
+					text-decoration: none;
+				}
 				& .btn {
 					background: none;
 					border: none;

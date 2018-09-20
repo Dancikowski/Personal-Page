@@ -168,6 +168,8 @@ li:hover .tooltip {
         display: flex;
         align-self: flex-start;
         border: 1px solid #cec9c9; }
+        .home .wrapper .tiny-info .social-buttons a {
+          text-decoration: none; }
         .home .wrapper .tiny-info .social-buttons .btn {
           background: none;
           border: none;
@@ -220,7 +222,9 @@ li:hover .tooltip {
       color: #51515166; }
       .about .wrapper .content h3 {
         color: #3b3b3b;
-        font-size: 50px; }
+        font-size: 50px;
+        margin: 0;
+        margin-bottom: 10px; }
       .about .wrapper .content .description {
         font-size: 22px;
         line-height: 1.5rem;
@@ -370,10 +374,10 @@ li:hover .tooltip {
     height: 80%;
     overflow: hidden; }
     .technologies .wrapper h2 {
-      font-size: 45px;
+      font-size: 40px;
       width: 80%;
       text-align: center;
-      margin-top: 0;
+      margin-top: 5px;
       margin-bottom: 0; }
     .technologies .wrapper .technologies-boxes::after {
       height: 20px; }
@@ -381,8 +385,8 @@ li:hover .tooltip {
       grid-template-columns: 1fr 1fr;
       margin-top: 20px; }
       .technologies .wrapper .technologies-boxes .logotypes img {
-        height: 150px;
-        width: 150px; }
+        height: 100px;
+        width: 100px; }
       .technologies .wrapper .technologies-boxes .logotypes img:nth-child(4) {
         border-bottom-left-radius: 0; }
       .technologies .wrapper .technologies-boxes .logotypes img:nth-child(5) {
