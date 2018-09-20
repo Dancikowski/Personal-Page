@@ -8,13 +8,8 @@ import Tools from "./Tools";
 const SingleComponent = props => {
 	return (
 		<div
-			className={
-				props.state.selected === props.name
-					? `active animated wrapper wrapper--${props.name}`
-					: `wrapper wrapper--${props.name} ${props.position} ${
-							props.unvisible
-					  }`
-			}
+			className={`wrapper wrapper--${props.name}`}
+			style={{ position: "static" }}
 		>
 			{
 				{

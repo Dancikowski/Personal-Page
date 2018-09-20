@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import SingleComponent from "./components/SingleComponent";
+import SingleComponentMobile from "./components/SingleComponentMobile";
 import DotButtons from "./components/DotButtons";
 import Menu from "./components/MainMenu";
 class App extends Component {
@@ -25,23 +26,31 @@ class App extends Component {
 			if (event.keyCode === 38) this.singleScrollUp();
 		});
 
+		let scrollTimer = false;
+
 		window.addEventListener("wheel", e => {
+			e.preventDefault();
 			scrollStatus.wheeling = true;
 			if (!scrollStatus.functionCall) {
-				if (e.deltaY > 0) {
-					this.signleScrollDown();
-				}
-				if (e.deltaY < 0) {
-					this.singleScrollUp();
-				}
+				this.pageScroll(e);
 				scrollStatus.functionCall = true;
 			}
 
-			setTimeout(() => {
+			window.clearInterval(scrollTimer);
+			scrollTimer = window.setTimeout(function() {
 				scrollStatus.wheeling = false;
 				scrollStatus.functionCall = false;
-			}, 2200);
+			}, 500);
 		});
+	}
+
+	pageScroll(e) {
+		if (e.deltaY > 0) {
+			this.signleScrollDown();
+		}
+		if (e.deltaY < 0) {
+			this.singleScrollUp();
+		}
 	}
 
 	signleScrollDown() {
@@ -51,7 +60,6 @@ class App extends Component {
 					this.state.components.indexOf(this.state.selected) + 1
 				],
 			});
-		console.log(this.state.selected);
 	}
 	singleScrollUp() {
 		this.state.selected !== this.state.components[0] &&
@@ -80,45 +88,62 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<nav className="main-menu">
-					<ul>
-						{this.state.components.map(name => (
-							<Menu
-								Update={this.handleUpdateSelected}
-								name={name}
-								key={name}
-							/>
+				{window.matchMedia("(min-width: 768px)").matches && (
+					<nav className="main-menu">
+						<ul>
+							{this.state.components.map(name => (
+								<Menu
+									Update={this.handleUpdateSelected}
+									name={name}
+									key={name}
+								/>
+							))}
+						</ul>
+					</nav>
+				)}
+				{window.matchMedia("(min-width: 768px)").matches ? (
+					this.state.components.map((name, index) => (
+						<SingleComponent
+							key={name}
+							state={this.state}
+							name={name}
+							unvisible={
+								this.state.begin !== name ? "unvisible" : ""
+							}
+							position={
+								this.state.components.indexOf(
+									this.state.components[index]
+								) >
+								this.state.components.indexOf(
+									this.state.selected
+								)
+									? "after"
+									: "before"
+							}
+						/>
+					))
+				) : (
+					<div className="mobile-wrapper">
+						{" "}
+						{this.state.components.map((name, index) => (
+							<SingleComponentMobile key={name} name={name} />
 						))}
-					</ul>
-				</nav>
-				{this.state.components.map((name, index) => (
-					<SingleComponent
-						key={name}
-						state={this.state}
-						name={name}
-						unvisible={this.state.begin !== name ? "unvisible" : ""}
-						position={
-							this.state.components.indexOf(
-								this.state.components[index]
-							) >
-							this.state.components.indexOf(this.state.selected)
-								? "after"
-								: "before"
-						}
-					/>
-				))}
-				<nav className="nav-dots">
-					<ul>
-						{this.state.components.map(name => (
-							<DotButtons
-								Update={this.handleUpdateSelected}
-								key={name}
-								name={name}
-								state={this.state}
-							/>
-						))}
-					</ul>
-				</nav>
+					</div>
+				)}
+				{window.matchMedia("(min-width: 768px)").matches && (
+					<nav className="nav-dots">
+						<ul>
+							{this.state.components.map(name => (
+								<DotButtons
+									Update={this.handleUpdateSelected}
+									key={name}
+									name={name}
+									state={this.state}
+								/>
+							))}
+						</ul>
+					</nav>
+				)}
 			</div>
 		);
 	}
