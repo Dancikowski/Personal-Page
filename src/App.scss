@@ -210,9 +210,7 @@ li:hover .tooltip {
 				display: flex;
 				align-self: flex-start;
 				border: 1px solid rgb(206, 201, 201);
-				& a {
-					text-decoration: none;
-				}
+
 				& .btn {
 					background: none;
 					border: none;
@@ -463,9 +461,10 @@ li:hover .tooltip {
 			flex-direction: column;
 			justify-content: center;
 			width: 95%;
+			overflow: hidden;
 
 			& h2 {
-				font-size: 60px;
+				font-size: 55px;
 				width: 90%;
 				text-align: center;
 			}
@@ -492,13 +491,13 @@ li:hover .tooltip {
 	.technologies {
 		& .wrapper {
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: space-around;
 			width: 95%;
-			height: 80%;
+			height: 90%;
 			overflow: hidden;
 
 			& h2 {
-				font-size: 40px;
+				font-size: 35px;
 				width: 80%;
 				text-align: center;
 				margin-top: 5px;

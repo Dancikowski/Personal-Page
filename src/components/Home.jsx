@@ -19,23 +19,14 @@ class Home extends Component {
 							working in Sealcode.org.
 						</span>
 						<div className="social-buttons">
-							<a
-								href="https://www.linkedin.com/in/laseckidamian/"
-								target="_blank"
-							>
-								<button className="btn lnkd">
-									My profile on
-									<img src={lnkdLogo} />
-								</button>
-							</a>
-							<a
-								href="https://codepen.io/Dancikowski"
-								target="_blank"
-							>
-								<button className="btn cdpn">
-									My profile on <img src={cdpnLogo} />
-								</button>
-							</a>
+							<button className="btn lnkd">
+								My profile on
+								<img src={lnkdLogo} />
+							</button>
+
+							<button className="btn cdpn">
+								My profile on <img src={cdpnLogo} />
+							</button>
 						</div>
 					</div>
 				</div>

@@ -168,8 +168,6 @@ li:hover .tooltip {
         display: flex;
         align-self: flex-start;
         border: 1px solid #cec9c9; }
-        .home .wrapper .tiny-info .social-buttons a {
-          text-decoration: none; }
         .home .wrapper .tiny-info .social-buttons .btn {
           background: none;
           border: none;
@@ -352,9 +350,10 @@ li:hover .tooltip {
   .technologies .wrapper {
     flex-direction: column;
     justify-content: center;
-    width: 95%; }
+    width: 95%;
+    overflow: hidden; }
     .technologies .wrapper h2 {
-      font-size: 60px;
+      font-size: 55px;
       width: 90%;
       text-align: center; }
     .technologies .wrapper .technologies-boxes::after {
@@ -369,12 +368,12 @@ li:hover .tooltip {
 @media (max-width: 500px) {
   .technologies .wrapper {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 95%;
-    height: 80%;
+    height: 90%;
     overflow: hidden; }
     .technologies .wrapper h2 {
-      font-size: 40px;
+      font-size: 35px;
       width: 80%;
       text-align: center;
       margin-top: 5px;
