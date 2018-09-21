@@ -15,7 +15,7 @@ const About = () => {
 						{
 							<span
 								className="jumpstyle"
-								onTouchStart={() => alert("log")}
+								onPress={() => alert("log")}
 							>
 								{" "}
 								jumpstyle{" "}
