@@ -88,7 +88,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				{window.matchMedia("(min-width: 768px)").matches && (
+				{window.matchMedia("(min-width: 1025px)").matches && (
 					<nav className="main-menu">
 						<ul>
 							{this.state.components.map(name => (
@@ -101,7 +101,7 @@ class App extends Component {
 						</ul>
 					</nav>
 				)}
-				{window.matchMedia("(min-width: 768px)").matches ? (
+				{window.matchMedia("(min-width: 1025px)").matches ? (
 					this.state.components.map((name, index) => (
 						<SingleComponent
 							key={name}
@@ -130,7 +130,7 @@ class App extends Component {
 						))}
 					</div>
 				)}
-				{window.matchMedia("(min-width: 768px)").matches && (
+				{window.matchMedia("(min-width: 1025px)").matches && (
 					<nav className="nav-dots">
 						<ul>
 							{this.state.components.map(name => (

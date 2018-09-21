@@ -12,7 +12,7 @@ body {
   font-family: "Archivo Black", sans-serif;
   font-size: 20px; }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
   body {
     overflow-y: hidden;
     height: 100vh; } }
@@ -447,14 +447,36 @@ li:hover .tooltip {
   .tools .wrapper {
     width: 90%; }
     .tools .wrapper .tools-logotypes img {
-      width: 20vw;
-      height: 20vw; } }
+      width: 15vw;
+      height: 15vw; } }
 
-@media (max-width: 668px) {
+@media (max-width: 813px) {
+  .tools .wrapper {
+    justify-content: space-around;
+    width: 90%; }
+    .tools .wrapper h2 {
+      margin-top: 0;
+      font-size: 10vw;
+      margin-bottom: 0; }
+    .tools .wrapper p {
+      font-size: 2vw;
+      margin-top: 2px; }
+    .tools .wrapper .tools-logotypes {
+      transform: translateY(-50px);
+      width: 100%; }
+    .tools .wrapper img {
+      width: 60vw;
+      height: 60vw;
+      padding: 5px; } }
+
+@media (max-width: 600px) {
   .tools .wrapper {
     justify-content: space-around; }
     .tools .wrapper h2 {
-      margin-top: 0; }
+      font-size: 14vw; }
+    .tools .wrapper p {
+      font-size: 4vw;
+      margin-top: 2px; }
     .tools .wrapper .tools-logotypes {
       margin-top: -100px;
       width: 75%;
@@ -479,6 +501,6 @@ li:hover .tooltip {
         right: 4vw;
         transform: rotate(3deg); }
       .tools .wrapper .tools-logotypes img {
-        width: 30vw;
-        height: 30vw;
+        width: 15vh;
+        height: 15vh;
         padding: 15px; } }
