@@ -478,27 +478,26 @@ li:hover .tooltip {
       font-size: 4vw;
       margin-top: 2px; }
     .tools .wrapper .tools-logotypes {
-      margin-top: -100px;
       width: 75%;
       display: block;
       position: relative; }
       .tools .wrapper .tools-logotypes .tool-logotype--0 {
         position: absolute;
-        left: 4vw;
+        left: 4.5vw;
         transform: rotate(-3deg); }
       .tools .wrapper .tools-logotypes .tool-logotype--1 {
         position: absolute;
-        right: 4vw;
+        right: 4.5vw;
         transform: rotate(1deg); }
       .tools .wrapper .tools-logotypes .tool-logotype--2 {
         position: absolute;
         top: 50%;
-        left: 4vw;
+        left: 4.5vw;
         transform: rotate(-2deg); }
       .tools .wrapper .tools-logotypes .tool-logotype--3 {
         position: absolute;
         top: 50%;
-        right: 4vw;
+        right: 4.5vw;
         transform: rotate(3deg); }
       .tools .wrapper .tools-logotypes img {
         width: 15vh;

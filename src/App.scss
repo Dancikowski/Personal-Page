@@ -636,7 +636,6 @@ li:hover .tooltip {
 				margin-top: 2px;
 			}
 			& .tools-logotypes {
-				margin-top: -100px;
 				width: 75%;
 				display: block;
 				position: relative;
@@ -644,25 +643,25 @@ li:hover .tooltip {
 				& .tool-logotype {
 					&--0 {
 						position: absolute;
-						left: 4vw;
+						left: 4.5vw;
 						transform: rotate(-3deg);
 					}
 					&--1 {
 						position: absolute;
-						right: 4vw;
+						right: 4.5vw;
 						transform: rotate(1deg);
 					}
 					&--2 {
 						position: absolute;
 						top: 50%;
-						left: 4vw;
+						left: 4.5vw;
 						transform: rotate(-2deg);
 					}
 
 					&--3 {
 						position: absolute;
 						top: 50%;
-						right: 4vw;
+						right: 4.5vw;
 						transform: rotate(3deg);
 					}
 				}
