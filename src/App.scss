@@ -614,11 +614,12 @@ li:hover .tooltip {
 			& .tools-logotypes {
 				transform: translateY(-50px);
 				width: 100%;
-			}
-			img {
-				width: 60vw;
-				height: 60vw;
-				padding: 5px;
+
+				& img {
+					width: 15vw;
+					height: 15vw;
+					padding: 15px;
+				}
 			}
 		}
 	}
@@ -665,9 +666,9 @@ li:hover .tooltip {
 						transform: rotate(3deg);
 					}
 				}
-				img {
-					width: 15vh;
-					height: 15vh;
+				& img {
+					width: 17vh;
+					height: 17vh;
 					padding: 15px;
 				}
 			}
