@@ -207,6 +207,14 @@ li:hover .tooltip {
           width: 50%;
           padding: 10px 20px; } }
 
+@media (max-width: 813px) and (max-height: 400px) {
+  .home .wrapper {
+    height: 90%; }
+    .home .wrapper .title {
+      margin-bottom: 0; }
+    .home .wrapper .tiny-info .social-buttons {
+      width: 50%; } }
+
 .about {
   width: 100%;
   height: 100%;
@@ -288,7 +296,7 @@ li:hover .tooltip {
     height: 80%;
     text-align: center; }
     .about .wrapper .content {
-      width: 85%; }
+      width: 90%; }
       .about .wrapper .content h3 {
         font-size: 30px; }
       .about .wrapper .content .description {
@@ -374,13 +382,13 @@ li:hover .tooltip {
 @media (max-width: 813px) and (max-height: 400px) {
   .technologies .wrapper {
     width: 90%;
-    height: 90%;
+    height: 80%;
     flex-direction: column;
     overflow: hidden;
     justify-content: space-around; }
     .technologies .wrapper h2 {
       width: 90%;
-      font-size: 4vw; }
+      font-size: 5vw; }
     .technologies .wrapper .technologies-boxes::after {
       height: 20px; }
     .technologies .wrapper .technologies-boxes .logotypes {
