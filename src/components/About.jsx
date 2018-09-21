@@ -1,9 +1,6 @@
 import React from "react";
 
 const About = () => {
-	function log() {
-		document.querySelector(".info").style.visibility = "visible";
-	}
 	return (
 		<div className="about">
 			<div className="wrapper">
@@ -15,7 +12,7 @@ const About = () => {
 						{
 							<span
 								className="jumpstyle"
-								onTouchStart={() => alert("log")}
+								onPress={() => alert("Log")}
 							>
 								{" "}
 								jumpstyle{" "}

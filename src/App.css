@@ -47,9 +47,6 @@ body {
   .wrapper--Tools {
     z-index: -3;
     background: linear-gradient(#c56a6a 15%, #af6060); }
-  .wrapper--Projects {
-    z-index: -4;
-    background: linear-gradient(#794848 15%, #893859); }
 
 .animated {
   transform: translate3d(0, 0, 0);
