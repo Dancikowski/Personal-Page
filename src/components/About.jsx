@@ -12,7 +12,7 @@ const About = () => {
 						{
 							<span
 								className="jumpstyle"
-								onPress={() => alert("Log")}
+								onClick={() => alert("Log")}
 							>
 								{" "}
 								jumpstyle{" "}

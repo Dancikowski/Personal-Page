@@ -245,14 +245,14 @@ li:hover .tooltip {
             width: 350px;
             height: 175px;
             top: -185px;
-            visibility: hidden;
             left: -105px;
             background: #fff;
             box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translate3d(0, 10px, 0);
-            transition: all 0.4s ease;
-            cursor: auto; }
+            transition: opacity 0.4s ease;
+            cursor: auto;
+            display: none; }
             .about .wrapper .content .description .jumpstyle .info p {
               color: #6e6e6ed3;
               font-size: 12px;
@@ -284,7 +284,7 @@ li:hover .tooltip {
               background: #fff; }
           @media (min-width: 1280px) {
             .about .wrapper .content .description .jumpstyle:hover .info {
-              visibility: visible;
+              display: block;
               transform: translate3d(0, 0, 0);
               opacity: 0.97; } }
 
