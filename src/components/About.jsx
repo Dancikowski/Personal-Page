@@ -12,7 +12,11 @@ const About = () => {
 						{
 							<span
 								className="jumpstyle"
+<<<<<<< HEAD
 								onPress={() => alert("Log")}
+=======
+								onPress={() => alert("log")}
+>>>>>>> 4b7bdf44a241f0939e0c953ee35fcf345d6d6d46
 							>
 								{" "}
 								jumpstyle{" "}
