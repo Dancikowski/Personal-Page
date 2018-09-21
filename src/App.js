@@ -9,7 +9,7 @@ class App extends Component {
 		super();
 
 		this.state = {
-			components: ["Home", "About", "Technologies", "Tools", "Projects"],
+			components: ["Home", "About", "Technologies", "Tools"],
 			begin: null,
 			selected: "Home",
 		};
@@ -68,7 +68,6 @@ class App extends Component {
 					this.state.components.indexOf(this.state.selected) - 1
 				],
 			});
-		console.log(this.state.selected);
 	}
 
 	handleUpdateSelected = component => {

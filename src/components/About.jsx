@@ -1,6 +1,9 @@
 import React from "react";
 
 const About = () => {
+	function log() {
+		document.querySelector(".info").style.visibility = "visible";
+	}
 	return (
 		<div className="about">
 			<div className="wrapper">
@@ -10,15 +13,7 @@ const About = () => {
 						Before I started programming I did lots of different
 						things, inter alia, I was a football player,
 						{
-							<span
-								className="jumpstyle"
-								onClick={
-									window.matchMedia("(max-width:768px)")
-										.matches
-										? () => console.log("log")
-										: console.log("nie ma loga")
-								}
-							>
+							<span className="jumpstyle" onClick={log}>
 								{" "}
 								jumpstyle{" "}
 								<span className="info">

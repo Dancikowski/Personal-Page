@@ -285,10 +285,11 @@ li:hover .tooltip {
               top: 170px;
               left: 160px;
               background: #fff; }
-          .about .wrapper .content .description .jumpstyle:hover .info {
-            visibility: visible;
-            transform: translate3d(0, 0, 0);
-            opacity: 0.97; }
+          @media (min-width: 1280px) {
+            .about .wrapper .content .description .jumpstyle:hover .info {
+              visibility: visible;
+              transform: translate3d(0, 0, 0);
+              opacity: 0.97; } }
 
 @media (max-width: 968px) {
   .about .wrapper {
