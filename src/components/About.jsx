@@ -13,7 +13,10 @@ const About = () => {
 						Before I started programming I did lots of different
 						things, inter alia, I was a football player,
 						{
-							<span className="jumpstyle" onClick={log}>
+							<span
+								className="jumpstyle"
+								onClick={() => alert("log")}
+							>
 								{" "}
 								jumpstyle{" "}
 								<span className="info">
