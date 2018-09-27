@@ -5,9 +5,7 @@ const DotButtons = props => {
 		<li
 			onClick={() => props.Update(props.name)}
 			style={
-				props.state.selected === props.name
-					? { color: "#ffffff98" }
-					: {}
+				props.state.selected === props.name ? { color: "#fafafa" } : {}
 			}
 		>
 			<div className="tooltip">{props.name}</div>
