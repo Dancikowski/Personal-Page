@@ -21,11 +21,16 @@ class Home extends Component {
 						<div className="social-buttons">
 							<button className="btn lnkd">
 								My profile on
-								<img src={lnkdLogo} />
+								<div className="button-img-container">
+									<img src={lnkdLogo} />
+								</div>
 							</button>
 
 							<button className="btn cdpn">
-								My profile on <img src={cdpnLogo} />
+								My profile on{" "}
+								<div className="button-img-container">
+									<img src={cdpnLogo} />
+								</div>
 							</button>
 						</div>
 					</div>

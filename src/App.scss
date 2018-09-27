@@ -230,25 +230,24 @@ li:hover .tooltip {
 					border: none;
 					color: #e2dede;
 					padding: 10px;
+					padding-right: 0;
 					cursor: pointer;
 					display: flex;
 					align-items: center;
 					transition: all 0.3s ease;
 					&:hover {
-						background: #66526e;
+						background: #c0c0c0;
 					}
 
-					&:first-child {
-						position: relative;
-						&::after {
-							content: "";
-							position: absolute;
-							width: 1px;
-							display: block;
-							background: #786181;
-							height: 99%;
-							left: 100%;
-						}
+					& .button-img-container {
+						background: white;
+						height: 169%;
+						display: flex;
+						overflow: hidden;
+						justify-content: center;
+						align-items: center;
+						width: 50px;
+						margin-left: 5px;
 					}
 
 					& img {
@@ -277,6 +276,10 @@ li:hover .tooltip {
 					& .btn {
 						width: 50%;
 						padding: 10px 20px;
+						padding-right: 0;
+						display: flex;
+						justify-content: space-between;
+						text-align: center;
 					}
 				}
 			}
