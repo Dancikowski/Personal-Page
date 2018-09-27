@@ -19,7 +19,7 @@ class Modal extends React.Component {
 		return ReactDOM.createPortal(
 			<div className="info-mobile">
 				<div className="header">What is this? </div>
-				<div className="close" />
+				<div className="close" onClick={this.props.toggle} />
 				<p>
 					Jumpstyle is a type of dancing developed in Belgium and
 					Netherlands from a type of kicking martial arts. It based on

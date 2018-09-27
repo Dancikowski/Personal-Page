@@ -9,7 +9,6 @@ class About extends Component {
 		this.setState({
 			portalVisibility: !this.state.portalVisibility,
 		});
-		console.log("true");
 	};
 	render() {
 		return (
@@ -31,7 +30,11 @@ class About extends Component {
 										.matches ? (
 										<Tooltip />
 									) : (
-										this.state.portalVisibility && <Modal />
+										this.state.portalVisibility && (
+											<Modal
+												toggle={this.handleMouseEnter}
+											/>
+										)
 									)}
 								</span>
 							}
