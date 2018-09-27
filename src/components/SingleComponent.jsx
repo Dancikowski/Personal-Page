@@ -9,11 +9,13 @@ const SingleComponent = props => {
 	return (
 		<div
 			className={
-				props.state.selected === props.name
-					? `active animated wrapper wrapper--${props.name}`
-					: `wrapper wrapper--${props.name} ${props.position} ${
-							props.unvisible
-					  }`
+				props.state !== undefined
+					? props.state.selected === props.name
+						? `active animated wrapper wrapper--${props.name}`
+						: `wrapper wrapper--${props.name} ${props.position} ${
+								props.unvisible
+						  }`
+					: `wrapper wrapper--${props.name}`
 			}
 		>
 			{

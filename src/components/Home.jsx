@@ -32,7 +32,7 @@ class Home extends Component {
 				</div>
 				<svg
 					xmlns="//www.w3.org/2000/svg"
-					class="shardRight"
+					className="shardRight"
 					viewBox="0 0 165.9 369.5"
 					preserveAspectRatio="xMaxYMin meet"
 				>

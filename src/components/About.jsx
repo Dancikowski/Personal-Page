@@ -6,7 +6,10 @@ class About extends Component {
 	state = { portalVisibility: false };
 
 	handleMouseEnter = () => {
-		alert("siema");
+		this.setState({
+			portalVisibility: !this.state.portalVisibility,
+		});
+		console.log("true");
 	};
 	render() {
 		return (
@@ -20,7 +23,7 @@ class About extends Component {
 							{
 								<span
 									className="jumpstyle"
-									onTouchEnd={this.handleMouseEnter}
+									onClick={this.handleMouseEnter}
 								>
 									{" "}
 									jumpstyle{" "}

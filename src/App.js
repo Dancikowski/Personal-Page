@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import SingleComponent from "./components/SingleComponent";
-import SingleComponentMobile from "./components/SingleComponentMobile";
 import DotButtons from "./components/DotButtons";
 import Menu from "./components/MainMenu";
 class App extends Component {
@@ -125,7 +124,7 @@ class App extends Component {
 					<div className="mobile-wrapper">
 						{" "}
 						{this.state.components.map((name, index) => (
-							<SingleComponentMobile key={name} name={name} />
+							<SingleComponent key={name} name={name} />
 						))}
 					</div>
 				)}
