@@ -38,7 +38,7 @@ body {
   transition: transform 1.2s cubic-bezier(0.55, 0.05, 0.35, 0.95); }
   .wrapper--Home {
     z-index: -2;
-    background: linear-gradient(#573889 15%, #5b3889); }
+    background: linear-gradient(#422969 15%, #4b2c74); }
   .wrapper--About {
     z-index: -1;
     background: linear-gradient(#e9e9e9 15%, #d4d5d6); }
@@ -194,6 +194,7 @@ li:hover .tooltip {
             border: none;
             color: #e2dede;
             padding-right: 0;
+            padding-left: 0.6vw;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -228,7 +229,7 @@ li:hover .tooltip {
     .home .wrapper .tiny-info {
       width: 100%; }
       .home .wrapper .tiny-info .social-buttons {
-        width: 100%;
+        width: 90%;
         justify-content: space-between; }
         .home .wrapper .tiny-info .social-buttons .btn {
           width: 50%;
