@@ -45,7 +45,7 @@ body {
 
 	&--Home {
 		z-index: -2;
-		background: linear-gradient(-114.83deg, #813452 15%, #573889 5%);
+		background: linear-gradient(#573889 15%, #5b3889);
 	}
 	&--About {
 		z-index: -1;
@@ -244,6 +244,7 @@ li:hover .tooltip {
 						transition: all 0.3s ease;
 						width: 100%;
 						position: relative;
+						height: 2.5rem;
 
 						@media (min-width: 1025px) {
 							&:hover .button-img-container {
@@ -253,6 +254,7 @@ li:hover .tooltip {
 
 						& .button-img-container {
 							position: absolute;
+							top: 0;
 							right: 0;
 							background: white;
 							height: 2.5rem;

@@ -32,7 +32,7 @@ class Home extends Component {
 							</a>
 							<a
 								href="
-							https://www.linkedin.com/in/laseckidamian/"
+								https://codepen.io/Dancikowski"
 								target="_blank"
 							>
 								<button className="btn cdpn">
