@@ -94,6 +94,8 @@ class App extends Component {
 									Update={this.handleUpdateSelected}
 									name={name}
 									key={name}
+									components={this.state.components}
+									selected={this.state.selected}
 								/>
 							))}
 						</ul>

@@ -35,13 +35,13 @@ body {
   align-items: center;
   font-size: 3.5rem;
   color: #75747469;
-  transition: transform 1.2s cubic-bezier(0.55, 0.05, 0.35, 0.95); }
+  transition: transform 0.9s cubic-bezier(0.55, 0.05, 0.35, 0.95); }
   .wrapper--Home {
     z-index: -2;
     background: linear-gradient(#51519d 15%, #574794); }
   .wrapper--About {
     z-index: -1;
-    background: linear-gradient(#e9e9e9 15%, #d4d5d6); }
+    background: linear-gradient(#fafafa 15%, #e3effc); }
   .wrapper--Technologies {
     z-index: -2;
     background: linear-gradient(#272a35 15%, #292e3c); }
@@ -123,7 +123,7 @@ body {
 li {
   position: relative;
   cursor: pointer;
-  transition: all 0.2s ease; }
+  transition: all 0.4s ease 0.5s; }
 
 .tooltip {
   font-family: sans-serif;
@@ -284,7 +284,7 @@ li:hover .tooltip {
             box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translate3d(0, 10px, 0);
-            transition: opacity 0.4s ease;
+            transition: transform 0.4s ease;
             cursor: auto;
             display: none; }
             .about .wrapper .content .description .jumpstyle .info p {
@@ -329,11 +329,12 @@ li:hover .tooltip {
   top: 100vh;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 20px; }
+  font-size: 20px;
+  color: #575757; }
   .info-mobile .header {
-    color: #777777;
+    color: #464646;
     width: 100%;
-    background: #e4e4e4;
+    background: #e9e8e8;
     font-size: 30px;
     font-weight: 600;
     line-height: 1em;
@@ -344,21 +345,25 @@ li:hover .tooltip {
     width: 100%; }
     .info-mobile .close::after {
       content: "";
-      height: 20px;
+      height: 30px;
       width: 5px;
-      background: #5a5959;
+      background: #b36363;
       position: absolute;
-      right: 15px;
-      top: -1.5em;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 1.5em;
       transform: rotate(45deg); }
     .info-mobile .close::before {
       content: "";
-      height: 20px;
+      height: 30px;
       width: 5px;
-      background: #5a5959;
+      background: #b36363;
       position: absolute;
-      right: 15px;
-      top: -1.5em;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 1.5em;
       transform: rotate(-45deg); }
   .info-mobile p {
     padding: 10px; }
