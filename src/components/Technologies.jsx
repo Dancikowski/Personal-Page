@@ -4,9 +4,9 @@ import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactLogo from "../assets/react.png";
 import sass from "../assets/sass.png";
-import bootstrap from "../assets/bootstrap.png";
+import sql from "../assets/sql.png";
 
-const techLogos = [html, css, javascript, reactLogo, sass, bootstrap];
+const techLogos = [html, css, javascript, reactLogo, sass, sql];
 const Technologies = () => {
 	return (
 		<div className="technologies">
