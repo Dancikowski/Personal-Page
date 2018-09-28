@@ -45,7 +45,8 @@ body {
 
 	&--Home {
 		z-index: -2;
-		background: linear-gradient(#422969 15%, #4b2c74);
+
+		background: linear-gradient(#51519d 15%, #574794);
 	}
 	&--About {
 		z-index: -1;
@@ -190,7 +191,7 @@ li:hover .tooltip {
 	}
 	@media (max-width: 768px) {
 		& .shardRight {
-			fill: #413374;
+			fill: #47478a;
 		}
 	}
 	& .wrapper {
@@ -238,7 +239,6 @@ li:hover .tooltip {
 						border: none;
 						color: #e2dede;
 						padding-right: 0;
-						padding-left: 0.6vw;
 						cursor: pointer;
 						display: flex;
 						align-items: center;
