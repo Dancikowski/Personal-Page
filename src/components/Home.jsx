@@ -19,19 +19,29 @@ class Home extends Component {
 						</span>
 
 						<div className="social-buttons">
-							<button className="btn lnkd">
-								My profile on
-								<div className="button-img-container">
-									<img src={lnkdLogo} />
-								</div>
-							</button>
-
-							<button className="btn cdpn">
-								My profile on{" "}
-								<div className="button-img-container">
-									<img src={cdpnLogo} />
-								</div>
-							</button>
+							<a
+								href="https://www.linkedin.com/in/laseckidamian/"
+								target="_blank"
+							>
+								<button className="btn lnkd">
+									My profile on
+									<div className="button-img-container">
+										<img src={lnkdLogo} />
+									</div>
+								</button>
+							</a>
+							<a
+								href="
+							https://www.linkedin.com/in/laseckidamian/"
+								target="_blank"
+							>
+								<button className="btn cdpn">
+									My profile on{" "}
+									<div className="button-img-container">
+										<img src={cdpnLogo} />
+									</div>
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>

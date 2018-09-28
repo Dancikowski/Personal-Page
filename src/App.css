@@ -182,30 +182,41 @@ li:hover .tooltip {
         height: 2.5rem;
         display: flex;
         align-self: flex-start;
+        width: 300px;
         border: 1px solid #cec9c9; }
-        .home .wrapper .tiny-info .social-buttons .btn {
-          background: none;
-          border: none;
-          color: #e2dede;
-          padding-right: 0;
-          cursor: pointer;
+        .home .wrapper .tiny-info .social-buttons a {
+          text-decoration: none;
+          width: 50%;
           display: flex;
-          align-items: center;
-          transition: all 0.3s ease; }
-          .home .wrapper .tiny-info .social-buttons .btn:hover {
-            background: #c0c0c0; }
-          .home .wrapper .tiny-info .social-buttons .btn .button-img-container {
-            background: white;
-            height: 100%;
+          align-items: center; }
+          .home .wrapper .tiny-info .social-buttons a .btn {
+            background: none;
+            border: none;
+            color: #e2dede;
+            padding-right: 0;
+            cursor: pointer;
             display: flex;
-            overflow: hidden;
-            justify-content: center;
             align-items: center;
-            width: 50px;
-            margin-left: 5px; }
-          .home .wrapper .tiny-info .social-buttons .btn img {
-            height: 1.5rem;
-            margin-left: 5px; }
+            transition: all 0.3s ease;
+            width: 100%;
+            position: relative; }
+            @media (min-width: 1025px) {
+              .home .wrapper .tiny-info .social-buttons a .btn:hover .button-img-container {
+                width: 100%; } }
+            .home .wrapper .tiny-info .social-buttons a .btn .button-img-container {
+              position: absolute;
+              right: 0;
+              background: white;
+              height: 2.5rem;
+              display: flex;
+              overflow: hidden;
+              justify-content: center;
+              align-items: center;
+              width: 50px;
+              margin-left: 5px;
+              transition: all 0.3s ease-out; }
+            .home .wrapper .tiny-info .social-buttons a .btn img {
+              height: 1.5rem; }
 
 @media (max-width: 760px) {
   .home .wrapper {

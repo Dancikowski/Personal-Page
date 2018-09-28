@@ -224,35 +224,50 @@ li:hover .tooltip {
 				height: 2.5rem;
 				display: flex;
 				align-self: flex-start;
+				width: 300px;
 				border: 1px solid rgb(206, 201, 201);
 
-				& .btn {
-					background: none;
-					border: none;
-					color: #e2dede;
-					padding-right: 0;
-					cursor: pointer;
+				& a {
+					text-decoration: none;
+					width: 50%;
 					display: flex;
 					align-items: center;
-					transition: all 0.3s ease;
-					&:hover {
-						background: #c0c0c0;
-					}
 
-					& .button-img-container {
-						background: white;
-						height: 100%;
+					& .btn {
+						background: none;
+						border: none;
+						color: #e2dede;
+						padding-right: 0;
+						cursor: pointer;
 						display: flex;
-						overflow: hidden;
-						justify-content: center;
 						align-items: center;
-						width: 50px;
-						margin-left: 5px;
-					}
+						transition: all 0.3s ease;
+						width: 100%;
+						position: relative;
 
-					& img {
-						height: 1.5rem;
-						margin-left: 5px;
+						@media (min-width: 1025px) {
+							&:hover .button-img-container {
+								width: 100%;
+							}
+						}
+
+						& .button-img-container {
+							position: absolute;
+							right: 0;
+							background: white;
+							height: 2.5rem;
+							display: flex;
+							overflow: hidden;
+							justify-content: center;
+							align-items: center;
+							width: 50px;
+							margin-left: 5px;
+							transition: all 0.3s ease-out;
+						}
+
+						& img {
+							height: 1.5rem;
+						}
 					}
 				}
 			}
