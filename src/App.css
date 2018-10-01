@@ -294,7 +294,7 @@ li:hover .tooltip {
               padding-top: 25px;
               padding: 15px 5px;
               margin-top: 20px;
-              line-height: 1.1rem; }
+              line-height: 1rem; }
             .about .wrapper .content .description .jumpstyle .info::before {
               content: "What is this?";
               position: absolute;
